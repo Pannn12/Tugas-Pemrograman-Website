@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri - Pesona Jawa Tengah</title>
+
+    <link rel="icon" type="image/png" href="image/logo/logojateng.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="container nav-container">
+
+        <div class="logo-wrapper">
+            <img src="image/logo/logojateng.png" alt="Logo Jawa Tengah" class="logo-img">
+            <a href="index.html" class="logo">Pesona Jawa Tengah</a>
+        </div>
+
+        <ul class="nav-menu">
+    <li class="dropdown">
+        <a href="index.html">Beranda</a>
+        <ul class="dropdown-content">
+            <li><a href="index.html#destinations">Destinasi Populer</a></li>
+            <li><a href="index.html#culture">Kekayaan Budaya</a></li>
+            <li><a href="index.html#data-jawatengah">Data Umum</a></li> 
+        </ul>
+    </li>
+    
+    <li><a href="gallery.html">Galeri</a></li>
+    <li><a href="sejarah.html">Sejarah</a></li>
+            <li><a href="news.html">Berita & Info</a></li>
+</ul>
+
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </div>
+</nav>
+
+
+<section class="video-section">
+    <div class="container"> <h2 class="section-title">Galeri Video dan Musik</h2>
+        <p class="section-subtitle">Saksikan keindahan alam dan budaya Jawa Tengah, ditemani alunan Gamelan yang menenangkan.</p>
+
+        <div class="video-wrapper">
+            <video controls poster="image/galery/video_thumbnail.jpg"> <source src="image/galery/video.mp4" type="video/mp4">
+                Browser Anda tidak mendukung pemutar video.
+            </video>
+        </div>
+        
+        <div class="video-content-description">
+            <h3 style="text-align: center; color: #8b5e3c; margin-bottom: 15px;">Melihat Lebih Dekat Pesona Budaya dan Alam</h3>
+            <p style="text-align: justify; margin-bottom: 25px; color: #555;">
+                Video ini menyajikan kolase visual yang memukau dari berbagai sudut Jawa Tengah. Anda akan diajak menyelami megahnya Candi Borobudur , sejuknya kawasan Dieng, hingga riuhnya aktivitas di sentra batik. Setiap adegan dirancang untuk membangkitkan rasa ingin tahu dan kekaguman terhadap kekayaan provinsi ini.
+            </p>
+        </div>
+        
+        <hr style="border-top: 1px solid #ddd; margin: 40px 0;"> <div class="audio-container">
+            <h3>Iringan Musik Gamelan Jawa</h3>
+            <p class="section-subtitle" style="margin-bottom: 20px;">
+                Dengarkan lantunan musik tradisional Gamelan, sebuah warisan adiluhung yang menciptakan suasana damai dan meditatif. Musik ini adalah jantung dari banyak upacara adat dan pertunjukan Wayang Kulit.
+            </p>
+            <audio controls loop> <source src="music/musikgamelan.mp3" type="audio/mp3">
+                Browser Anda tidak mendukung pemutar audio.
+            </audio>
+        </div>
+    </div>
+</section>
+
+<section class="gallery" style="padding-top: 110px;">
+    <div class="container">
+        <p class="section-subtitle">Lihat keindahan Jawa Tengah dalam gambar</p>
+
+        <div class="gallery-grid">
+            <img src="image/galery/baju.jpg" 
+                 alt="Baju Adat" 
+                 class="gallery-item"
+                 data-title="Busana Adat Jawa Tengah"
+                 data-description="Busana adat Jawa Tengah yang anggun dan berwibawa, sering dikenakan dalam upacara pernikahan atau acara resmi. Pakaian ini mencerminkan filosofi hidup masyarakat Jawa."
+                 onclick="openModal(this)">
+
+            <img src="image/galery/upacaraadat.jpg" 
+                 alt="Upacara Adat" 
+                 class="gallery-item"
+                 data-title="Upacara Adat Tradisional"
+                 data-description="Berbagai upacara adat di Jawa Tengah, seperti Sekaten atau Grebeg Besar, yang kaya akan nilai sejarah dan budaya, menjadi daya tarik utama bagi wisatawan."
+                 onclick="openModal(this)">
+
+            <img src="image/galery/rumah.jpg" 
+                 alt="Rumah Adat" 
+                 class="gallery-item"
+                 data-title="Rumah Adat Joglo"
+                 data-description="Rumah Joglo adalah rumah tradisional Jawa dengan arsitektur khas yang memiliki makna filosofis mendalam pada setiap bagiannya, melambangkan status sosial dan kearifan lokal."
+                 onclick="openModal(this)">
+
+            <img src="image/galery/tari.jpg" 
+                 alt="Tarian Adat" 
+                 class="gallery-item"
+                 data-title="Tari Tradisional Jawa"
+                 data-description="Tari-tarian seperti Tari Gambyong atau Tari Serimpi menampilkan kehalusan gerakan dan ekspresi, menceritakan kisah-kisah legenda dan sejarah kerajaan."
+                 onclick="openModal(this)">
+
+            <img src="image/galery/batik.jpeg" 
+                 alt="Batik" 
+                 class="gallery-item"
+                 data-title="Batik Khas Jawa Tengah"
+                 data-description="Batik, warisan budaya tak benda UNESCO, memiliki beragam motif dari Solo, Pekalongan, hingga Semarang, masing-masing dengan makna dan cerita unik."
+                 onclick="openModal(this)">
+
+            <img src="image/galery/keris.jpg" 
+                 alt="Keris" 
+                 class="gallery-item"
+                 data-title="Keris Pusaka Jawa"
+                 data-description="Keris adalah senjata tradisional dan benda pusaka yang melambangkan kehormatan, keberanian, dan status. Pembuatannya melibatkan ritual khusus."
+                 onclick="openModal(this)">
+
+            <img src="image/galery/wayang.jpg" 
+                 alt="Wayang" 
+                 class="gallery-item"
+                 data-title="Pertunjukan Wayang Kulit"
+                 data-description="Wayang Kulit adalah seni pertunjukan bayangan yang dimainkan oleh dalang, seringkali mengangkat cerita dari epos Ramayana atau Mahabharata dengan nilai moral yang tinggi."
+                 onclick="openModal(this)">
+
+            <img src="image/galery/gamelan.jpg" 
+                 alt="Gamelan" 
+                 class="gallery-item"
+                 data-title="Musik Gamelan"
+                 data-description="Gamelan adalah ansambel musik tradisional yang didominasi oleh instrumen perkusi perunggu, menciptakan melodi yang meditatif dan sakral."
+                 onclick="openModal(this)">
+            
+            <img src="image/galery/gudeg.jpg" 
+                 alt="Gudeg" 
+                 class="gallery-item"
+                 data-title="Gudeg Khas Yogyakarta/Solo"
+                 data-description="Makanan khas yang terbuat dari nangka muda yang dimasak dengan santan dan gula merah, memberikan rasa manis gurih yang khas."
+                 onclick="openModal(this)">
+
+            <img src="image/galery/tempe.jpg" 
+                 alt="Tempe" 
+                 class="gallery-item"
+                 data-title="Tempe Mendoan"
+                 data-description="Tempe yang diiris tipis, dicelup adonan tepung berbumbu, dan digoreng setengah matang (mendo), paling enak disajikan hangat."
+                 onclick="openModal(this)">
+
+            <img src="image/galery/wingko.jpg" 
+                 alt="Wingko Babat" 
+                 class="gallery-item"
+                 data-title="Wingko Babat Semarang"
+                 data-description="Kue tradisional yang terbuat dari kelapa, gula, dan tepung ketan. Rasanya manis dan legit, menjadi oleh-oleh wajib dari Semarang."
+                 onclick="openModal(this)">
+
+            <img src="image/galery/lumpia.jpeg" 
+                 alt="Lumpia Semarang" 
+                 class="gallery-item"
+                 data-title="Lumpia Khas Semarang"
+                 data-description="Salah satu ikon kuliner Semarang, berisi rebung, telur, dan udang/ayam. Tersedia dalam versi basah dan goreng."
+                 onclick="openModal(this)">
+            
+        </div>
+        </div>
+</section>
+
+<div id="imageModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <img id="modalImage" src="" alt="Gambar Galeri">
+        <h3 id="modalTitle">Judul Gambar</h3>
+        <p id="modalDescription">Deskripsi Lengkap Gambar</p>
+    </div>
+</div>
+
+<hr class="audio-divider">
+
+<footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-brand">
+            <div class="footer-logo">
+                <img src="image/logo/logojateng.png" alt="Pesona Jawa Tengah">
+                <h3>Pesona Jawa Tengah</h3>
+            </div>
+            <p>Eksplorasi keindahan alam, budaya, sejarah, dan informasi menarik tentang Jawa Tengah.</p>
+        </div>
+
+        <div class="footer-links">
+            <h4>Menu Cepat</h4>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="gallery.html">Galeri</a></li>
+                <li><a href="sejarah.html">Sejarah</a></li>
+                <li><a href="news.html">Berita & Info</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-contact">
+            <h4>Kontak</h4>
+            <p>Email: <a href="mailto:info@pesonajateng.com">info@pesonajateng.com</a></p>
+            <p>Instagram: <a href="https://instagram.com" target="_blank">@pesonajateng</a></p>
+            <p>Telepon: <a href="tel:+62800000000">+62 800-0000-000</a></p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 Pesona Jawa Tengah. Semua Hak Dilindungi.</p>
+    </div>
+</footer>
+
+<button id="scrollTopBtn" title="Kembali ke Atas">↑</button> 
+
+<script src="script.js"></script>
+</body>
+</html>

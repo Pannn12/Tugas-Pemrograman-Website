@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berita & Acara - Pesona Jawa Tengah</title>
+    <link rel="icon" type="favicon.png" href="image/logo/logojateng.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="container nav-container">
+        <div class="logo-wrapper">
+            <img src="image/logo/logojateng.png" alt="Wonderful Indonesia" class="logo-img">
+            <a class="logo" href="index.html">Pesona Jawa Tengah</a>
+        </div>
+        <ul class="nav-menu">
+    <li class="dropdown">
+        <a href="index.html">Beranda</a>
+        <ul class="dropdown-content">
+            <li><a href="index.html#destinations">Destinasi Populer</a></li>
+            <li><a href="index.html#culture">Kekayaan Budaya</a></li>
+            <li><a href="index.html#data-jawatengah">Data Umum</a></li> 
+        </ul>
+    </li>
+    
+    <li><a href="gallery.html">Galeri</a></li>
+    <li><a href="sejarah.html">Sejarah</a></li>
+            <li><a href="news.html">Berita & Info</a></li>
+</ul>
+        <div class="hamburger">
+            <span></span><span></span><span></span>
+        </div>
+    </div>
+</nav>
+
+<section class="hero-subpage" style="background-image: url('image/info/header.jpg');">
+    <div class="hero-content">
+        <h1 class="hero-title">Berita & Info Terbaru</h1>
+        <p class="hero-subtitle">Jangan lewatkan event dan informasi terkini di Jawa Tengah</p>
+    </div>
+</section>
+
+<section id="news-content" class="history-section"> 
+    <div class="container">
+        <h2 class="section-title">Informasi Pariwisata Terkini</h2>
+        <p class="section-subtitle">Semua yang perlu Anda ketahui sebelum berkunjung</p>
+
+        <div class="news-grid">
+            <div class="news-card">
+                <img src="image/info/dieng.jpg" alt="Dieng Culture Festival" class="news-image">
+                <div class="news-content">
+                    <span class="news-date">📅 15 Oktober 2025 | Acara</span>
+                    <h4>Dieng Culture Festival Kembali Digelar!</h4>
+                    <p>Catat tanggalnya! Festival tahunan pencukuran rambut gimbal akan diselenggarakan bulan depan. Pesan tiket Anda segera!</p>
+                    <a href="https://festivaldieng.id/" class="read-more" target="_blank">Baca Selengkapnya →</a>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <img src="image/info/borobudur.jpg" alt="Restorasi Borobudur" class="news-image">
+                <div class="news-content">
+                    <span class="news-date">📅 01 September 2025 | Pemberitahuan</span>
+                    <h4>Pembatasan Akses Kunjungan di Borobudur</h4>
+                    <p>Demi menjaga kelestarian, jalur pendakian ke stupa utama akan dibatasi untuk periode 3 bulan ke depan.</p>
+                    <a href="https://ugm.ac.id/id/berita/22586-pengunjung-yang-naik-ke-candi-borobudur-sebaiknya-dibatasi/" class="read-more" target="_blank">Baca Selengkapnya →</a>
+                </div>
+            </div>
+            
+            <div class="news-card">
+                <img src="image/info/solo.jpg" alt="Kuliner Solo" class="news-image">
+                <div class="news-content">
+                    <span class="news-date">📅 25 Agustus 2025 | Kuliner</span>
+                    <h4>Solo Raya Dinobatkan Sebagai Kota Gastronomi</h4>
+                    <p>Berkat kekayaan Sate Buntel dan Serabi Notosuman, Solo kini diakui secara nasional sebagai kota kuliner unggulan.</p>
+                    <a href="https://www.antaranews.com/berita/4133349/menparekraf-usulkan-solo-sebagai-city-of-gastronomy#:~:text=Menteri%20Pariwisata%20dan%20Ekonomi%20Kreatif%20(Menparekraf)%20RI,City%20of%20Gastronomy%20ke%20United%20Nastions%20World" class="read-more" target="_blank">Baca Selengkapnya →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact-content" class="history-section"> 
+    <div class="container">
+        <h2 class="section-title">Sampaikan Pesan Anda & Lokasi Kami</h2>
+        <p class="section-subtitle">Gunakan formulir ini untuk pertanyaan umum atau temukan lokasi kantor dinas pariwisata utama kami.</p>
+
+        <div class="contact-grid">
+            
+            <div class="contact-form-wrapper">
+                <h3>Kirim Pesan Cepat</h3>
+                <form action="mailto:alfanpartll@gmail.com" 
+                method="GET" 
+                enctype="text/plain" 
+                class="contact-form">
+                
+                    <input type="text" name="Nama" placeholder="Nama Lengkap" required> 
+                    <input type="email" name="Email_Pengirim" placeholder="Alamat Email" required>
+                    <input type="text" name="subject" placeholder="Subjek Pesan">
+                    <textarea name="body" placeholder="Tuliskan pesan Anda di sini..." rows="6" required></textarea>
+                    <button type="submit" class="btn-primary">Kirim Pesan</button>
+                </form>
+            </div>
+            
+            <div class="contact-info-wrapper">
+                <h3>Peta Lokasi Utama Jawa Tengah</h3>
+                <div class="map-embed-wrapper">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15822.428448896575!2d110.42065369794186!3d-6.992644265103685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708b4d32000001%3A0x633519c8f2d59178!2sSemarang%2C%20Jawa%20Tengah!5e0!3m2!1sid!2sid!4v1702388048600!5m2!1sid!2sid" 
+                        width="100%" 
+                        height="400" 
+                        style="border:0; border-radius: 8px;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-brand">
+            <div class="footer-logo">
+                <img src="image/logo/logojateng.png" alt="Pesona Jawa Tengah">
+                <h3>Pesona Jawa Tengah</h3>
+            </div>
+            <p>Eksplorasi keindahan alam, budaya, sejarah, dan informasi menarik tentang Jawa Tengah.</p>
+        </div>
+
+        <div class="footer-links">
+            <h4>Menu Cepat</h4>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="gallery.html">Galeri</a></li>
+                <li><a href="sejarah.html">Sejarah</a></li>
+                <li><a href="news.html">Berita & Info</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-contact">
+            <h4>Kontak</h4>
+            <p>Email: <a href="mailto:info@pesonajateng.com">info@pesonajateng.com</a></p>
+            <p>Instagram: <a href="https://instagram.com" target="_blank">@pesonajateng</a></p>
+            <p>Telepon: <a href="tel:+62800000000">+62 800-0000-000</a></p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 Pesona Jawa Tengah. Semua Hak Dilindungi.</p>
+    </div>
+</footer>
+
+<button id="scrollTopBtn" title="Kembali ke Atas">↑</button> 
+
+<script src="script.js"></script>
+</body>
+</html>
