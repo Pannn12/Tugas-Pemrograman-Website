@@ -1074,3 +1074,394 @@ body {
         min-height: 250px; 
     }
 }
+
+/* Section Styling */
+.transportasi-section {
+    padding: 70px 0;
+    background: #fafafa;
+}
+
+/* Grid Layout */
+.transportasi-grid {
+    display: flex;
+    gap: 30px;
+    margin-top: 45px;
+    flex-wrap: wrap;
+}
+
+/* Card */
+.transport-card {
+    flex: 1;
+    min-width: 320px;
+    background: #fff;
+    padding: 28px;
+    border-radius: 14px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+    border: 1px solid #eee;
+    transition: all 0.25s ease;
+    position: relative;
+}
+
+/* Hover effect */
+.transport-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.10);
+}
+
+/* Header with icon */
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.card-icon {
+    font-size: 32px;
+}
+
+.transport-card h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+    color: #8b5e3c;
+}
+
+/* description */
+.card-desc {
+    color: #444;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+/* Custom list */
+.styled-list > li {
+    margin-bottom: 12px;
+    color: #333;
+}
+
+.styled-list ul li {
+    margin-top: 6px;
+    margin-left: 10px;
+    color: #555;
+    list-style: none;
+}
+
+/* Accent bar */
+.transport-card::before {
+    content: "";
+    width: 70px;
+    height: 4px;
+    background: #8b5e3c;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 0 0 6px 0;
+}
+
+/* Note text */
+.transport-note {
+    text-align: center;
+    margin-top: 35px;
+    font-style: italic;
+    color: #666;
+    font-size: 15px;
+}
+
+.kuliner-section {
+    padding: 70px 0;
+    background-color: #FFF2C6;
+}
+
+.kuliner-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.kuliner-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.kuliner-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.kuliner-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.kuliner-card h3 {
+    font-size: 1.3rem;
+    color: #8b5e3c;
+    margin: 15px 0 8px;
+}
+
+.kuliner-card p {
+    font-size: 0.9rem;
+    color: #666;
+    padding: 0 15px 15px;
+}
+
+/* =========================================== */
+/* CSS BARU UNTUK CARD DENGAN GAMBAR */
+/* =========================================== */
+
+/* --- 2. Festival Section --- */
+.festival-section {
+    padding: 70px 0;
+}
+
+.festival-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+/* =========================================== */
+/* CSS BARU UNTUK CARD DENGAN GAMBAR - FESTIVAL */
+/* =========================================== */
+
+/* --- 2. Festival Section --- */
+.festival-section {
+    padding: 70px 0;
+}
+
+.festival-grid {
+    /* Menyamakan dengan tradisi-grid: minmax(250px, 1fr) */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 25px;
+    margin-top: 40px;
+}
+
+/* Struktur Card Utama */
+.festival-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+    /* MENAMBAHKAN BORDER PADA CARD */
+    border: 1px solid #ddd; 
+}
+
+.festival-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Gambar */
+.festival-image {
+    width: 100%;
+    height: 150px; 
+    object-fit: cover; 
+    display: block;
+}
+
+/* Pembungkus Konten Teks */
+.card-content-wrap {
+    padding: 15px 20px 20px;
+    /* Mengganti warna border ke palet utama Anda */
+    border-bottom: 5px solid #8b5e3c; 
+}
+
+.festival-card h3 {
+    font-size: 1.3rem; 
+    color: #333;
+    margin: 0 0 8px;
+}
+
+.festival-card p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 12px;
+}
+
+.festival-time {
+    display: block;
+    font-weight: 600;
+    /* Mengganti warna teks waktu ke palet utama Anda */
+    color: #8b5e3c; 
+    font-size: 0.9rem;
+}
+
+
+/* =========================================== */
+/* CSS TRADISI (Disesuaikan/dikonfirmasi) */
+/* =========================================== */
+
+/* --- 3. Tradisi Section --- */
+.tradisi-section {
+    padding: 70px 0;
+}
+
+.tradisi-grid {
+    /* Setting ini sudah benar untuk 4x4 */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+/* Struktur Card Utama */
+.tradisi-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden; 
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: left; 
+    /* MENAMBAHKAN BORDER PADA CARD */
+    border: 1px solid #ddd; 
+}
+
+.tradisi-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Gambar */
+.tradisi-image {
+    width: 100%;
+    height: 150px; 
+    object-fit: cover;
+    display: block;
+}
+
+/* Pembungkus Konten Teks */
+.tradisi-card .card-content-wrap {
+    padding: 15px 20px 20px;
+    /* Warna border sudah disamakan */
+    border-bottom: 4px solid #8b5e3c; 
+}
+
+.tradisi-card h3 {
+    font-size: 1.2rem;
+    /* Warna teks sudah disamakan */
+    color: #8b5e3c; 
+    margin: 0 0 8px; 
+}
+
+.tradisi-card p {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 0;
+}
+
+
+/* MEDIA QUERY untuk Responsif */
+@media (max-width: 768px) {
+    /* Tinggi gambar disamakan/disesuaikan untuk mobile */
+    .festival-image, 
+    .tradisi-image {
+        height: 120px; 
+    }
+}
+
+/* --- 4. Cuaca & Musim Terbaik Section --- */
+.cuaca-section {
+    padding: 70px 0;
+    /* background: #eef7ff; Sudah ada di inline style */
+}
+
+.cuaca-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.cuaca-card {
+    flex: 1;
+    min-width: 250px;
+    max-width: 350px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border: 1px solid #ddd;
+}
+
+.cuaca-card h3 {
+    font-size: 1.4rem;
+    color: #8b5e3c;
+    margin-bottom: 8px;
+}
+
+.cuaca-card p:nth-child(2) { /* Rentang Waktu */
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.cuaca-card p:nth-child(3) { /* Deskripsi */
+    font-size: 0.95rem;
+    color: #666;
+    font-style: italic;
+}
+
+/* --- 5. Peta Wisata (Map) --- */
+.map-section {
+    padding: 70px 0;
+    background: #fff;
+}
+
+.map-wrapper {
+    margin-top: 40px;
+}
+.map-wrapper iframe {
+    /* Gaya iframe sudah diatur di media query, tapi tambahkan ini sebagai default */
+    min-height: 480px; 
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* =========================================== */
+/* PENYESUAIAN TRANSPORTASI (Untuk Mobile) */
+/* =========================================== */
+@media (max-width: 768px) {
+    
+    /* 1. Grid Transportasi */
+    .transportasi-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .transport-card {
+        min-width: 100%;
+    }
+    
+    /* 2. Grid Lainnya */
+    .kuliner-grid,
+    .festival-grid,
+    .tradisi-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .cuaca-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .cuaca-card {
+        max-width: 100%;
+        min-width: unset;
+    }
+}
