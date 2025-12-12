@@ -32,7 +32,7 @@ body {
 }
 
 /* =========================================== */
-/* NAVBAR & HAMBURGER STYLES                   */
+/* NAVBAR STYLING (DESKTOP)                    */
 /* =========================================== */
 
 .navbar {
@@ -41,41 +41,43 @@ body {
     top: 0;
     left: 0;
     background: #FFF2C6;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
     z-index: 1000;
+    backdrop-filter: blur(5px);
 }
 
 .nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
+    height: 72px;
+    padding: 0 15px;
 }
 
+/* LOGO */
 .logo-wrapper {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
 }
 
 .logo-img {
-    height: 30px;
-    width: auto;
-    object-fit: contain;
+    height: 36px;
 }
 
 .logo {
-    font-size: 1.4rem;
+    font-size: 1.45rem;
     font-weight: 700;
     color: #333;
     text-decoration: none;
-    line-height: 1;
 }
 
+/* NAV MENU */
 .nav-menu {
     display: flex;
-    gap: 25px;
-    transition: all 0.3s ease; 
+    gap: 30px;
+    align-items: center;
+    transition: all 0.35s ease; /* Tambahkan transisi menu untuk mobile */
 }
 
 .nav-menu li {
@@ -84,94 +86,204 @@ body {
 
 .nav-menu a {
     text-decoration: none;
-    font-size: 1rem;
     color: #333;
+    font-size: 1rem;
     font-weight: 500;
-    transition: 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 10px;
+    transition: 0.3s ease;
 }
 
 .nav-menu a:hover {
-    color: #B87C4C;
+    color: #8b5e3c;
+    transform: translateY(-2px);
 }
 
-/* HAMBURGER DEFAULT (Hidden on Desktop) */
+/* ICON STYLING */
+.nav-menu a i {
+    margin-right: 2px; /* Jarak ikon dalam tautan utama */
+    font-size: 0.95em;
+}
+
+.caret-icon {
+    transition: 0.3s ease;
+}
+
+.dropdown:hover .caret-icon {
+    transform: rotate(180deg);
+}
+
+/* DROPDOWN DESKTOP */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    position: absolute;
+    top: 100%;
+    left: -10px;
+    background: #FFF2C6;
+    min-width: 220px;
+    padding: 10px 0;
+    border-radius: 8px;
+    border-left: 4px solid #8b5e3c;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+
+    display: none;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.25s ease; /* Gunakan 'all' untuk transisi penuh */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dropdown-content a {
+    padding: 12px 20px;
+    font-size: 0.95rem;
+}
+
+.dropdown-content a:hover {
+    background: #f1e4b8;
+    color: #8b5e3c;
+    padding-left: 25px;
+}
+
+/* HAMBURGER (Mobile) */
 .hamburger {
-    display: none; 
+    display: none; /* Sembunyikan di desktop */
     cursor: pointer;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100%; /* Agar mudah diklik */
     gap: 5px;
-    height: 70px; 
+    z-index: 1001; /* Pastikan di atas menu yang terbuka */
 }
 
 .hamburger span {
     width: 28px;
     height: 3px;
     background: #333;
-    border-radius: 3px;
-    transition: all 0.3s ease; 
+    border-radius: 4px;
+    transition: 0.3s ease;
 }
 
-/* GAYA HAMBURGER AKTIF (Animasi X) */
+/* ANIMASI HAMBURGER */
 .hamburger.active span:nth-child(1) {
-    transform: translateY(8px) rotate(45deg); 
+    transform: translateY(8px) rotate(45deg);
 }
 
 .hamburger.active span:nth-child(2) {
-    opacity: 0; 
+    opacity: 0;
 }
 
 .hamburger.active span:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg); 
+    transform: translateY(-8px) rotate(-45deg);
 }
 
-/* DROPDOWN MENU DESKTOP */
-.dropdown {
-    position: relative;
-    display: inline-block;
+
+/* =========================================== */
+/* MOBILE RESPONSIVE STYLING (@media)          */
+/* =========================================== */
+
+@media (max-width: 768px) {
+
+    .nav-container {
+        padding: 0 20px; /* Tambahkan padding di HP */
+    }
+    
+    .hamburger {
+        display: flex; /* Tampilkan Hamburger */
+    }
+
+    /* Menu Utama Mobile */
+    .nav-menu {
+        position: fixed;
+        top: 72px; /* Di bawah navbar */
+        right: -100%; /* Sembunyikan di luar layar */
+        width: 70%; 
+        max-width: 300px;
+        height: 100vh;
+        
+        /* Ubah tampilan menjadi stack vertical */
+        flex-direction: column;
+        align-items: flex-start; /* Rata Kiri */
+        
+        padding: 20px 0; /* Padding vertikal */
+        background: #FFF2C6;
+        gap: 0; /* Hapus gap antar item menu */
+
+        transition: right 0.4s ease-out;
+        box-shadow: -4px 0 10px rgba(0,0,0,0.15);
+    }
+
+    .nav-menu.active {
+        right: 0; /* Tampilkan menu */
+    }
+
+    .nav-menu li {
+        width: 100%; /* Setiap item menu memenuhi lebar sidebar */
+    }
+
+    /* Tautan Menu (Item Utama) */
+    .nav-menu a {
+        width: 100%;
+        padding: 10px 20px; /* Padding besar agar mudah diklik */
+        justify-content: flex-start; /* Rata Kiri */
+        gap: 10px;
+        font-size: 1.1rem;
+        border-bottom: 1px solid #f1e4b8; /* Garis pemisah */
+    }
+    
+    .nav-menu a:hover {
+        transform: translateY(0); /* Hapus efek hover di mobile */
+        background: #f1e4b8;
+    }
+
+
+    /* DROPDOWN MOBILE (Ganti dari :hover ke kelas active jika menggunakan JS) */
+    .dropdown-content {
+        position: relative;
+        background: #f1e4b8; /* Latar belakang sedikit berbeda */
+        border-left: none;
+        box-shadow: none;
+        border-radius: 0;
+        min-width: 100%;
+        
+        /* Trik untuk menyembunyikan/menampilkan semua item */
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out, opacity 0.3s ease;
+    }
+
+    /* Di mobile, Dropdown tetap terbuka saat :hover (ini masalah, tapi ini solusi murni CSS) */
+    /* Jika Anda ingin menggunakan JS, Anda bisa mengganti ini dengan class '.dropdown.open' */
+    .dropdown:hover .dropdown-content {
+        max-height: 500px; /* Nilai besar agar semua item terlihat */
+        opacity: 1;
+    }
+
+    /* Item di dalam Dropdown Mobile */
+    .dropdown-content a {
+        padding: 8px 30px; /* Indentasi di dalam dropdown */
+        font-size: 1rem;
+        background: transparent;
+        border-bottom: none;
+    }
+
+    .dropdown-content a:hover {
+        padding-left: 35px;
+        background: #e6d3a3;
+    }
 }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: -10px;
-    background-color: #FFF2C6;
-    min-width: 200px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    z-index: 20;
-    list-style: none;
-    padding: 5px 0;
-    margin-top: 0;
-    border-radius: 6px;
-    border-left: 3px solid #8b5e3c; 
-}
-
-.dropdown-content li {
-    padding: 0;
-    margin: 0;
-}
-
-.dropdown-content a {
-    color: #333; 
-    padding: 10px 18px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-    font-size: 0.95rem; 
-    font-weight: 400;
-    transition: 0.2s;
-}
-
-.dropdown-content a:hover {
-    background-color: #f5f5f5;
-    color: #8b5e3c; 
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
 
 /* =========================================== */
 /* HERO & SUBPAGE HERO                         */
@@ -836,6 +948,13 @@ body {
     color: #fff;
     padding: 50px 20px 25px;
     margin-top: 60px;
+}
+
+.footer-brand .disclaimer-text {
+    margin-top: 20px;
+    font-size: 0.8rem; 
+    opacity: 0.8; 
+    line-height: 1.4;
 }
 
 .footer-container {
